@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>No-Inertia — Launch, Persist, Reconnect</title>
+  <meta name="description" content="A Termux-oriented local AI launcher concept for starting a persistent background process, following its log, checking status and reconnecting.">
+  <link rel="canonical" href="https://www-infinity4.github.io/No-Inertia/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="No-Inertia">
+  <meta property="og:title" content="No-Inertia — Launch, Persist, Reconnect">
+  <meta property="og:description" content="A mobile local-model launcher concept built around a persistent process, runtime logging and reconnection.">
+  <meta property="og:url" content="https://www-infinity4.github.io/No-Inertia/">
+  <meta property="og:image" content="https://www-infinity4.github.io/No-Inertia/assets/share-preview-v1.png?v=20260903-1">
+  <meta property="og:image:secure_url" content="https://www-infinity4.github.io/No-Inertia/assets/share-preview-v1.png?v=20260903-1">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="No-Inertia local AI runtime flowing from a phone terminal into a persistent process, log stream and status console.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="No-Inertia — Launch, Persist, Reconnect">
+  <meta name="twitter:description" content="Start a local model process, preserve its log, monitor it and reconnect.">
+  <meta name="twitter:image" content="https://www-infinity4.github.io/No-Inertia/assets/share-preview-v1.png?v=20260903-1">
+  <meta name="twitter:image:alt" content="No-Inertia persistent local AI runtime.">
+  <style>
+    :root{color-scheme:dark;--bg:#030910;--panel:#091523;--line:#21415d;--text:#edf7ff;--muted:#9cb1c5;--cyan:#32c7ff;--green:#69e6a0;--amber:#eeb764}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#103359 0,transparent 35%),radial-gradient(circle at 80% 40%,#173b2b 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,sans-serif}.shell{width:min(1120px,92vw);margin:auto;padding:28px 0 64px}.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}.brand{font-weight:900;letter-spacing:.14em}.actions{display:flex;gap:10px;flex-wrap:wrap}.button{appearance:none;border:1px solid var(--line);border-radius:999px;background:#0b1c2c;color:var(--text);padding:10px 16px;font:inherit;font-weight:750;text-decoration:none;cursor:pointer}.button.primary{border-color:#4dcfff;background:linear-gradient(110deg,#076c9d,#126340)}.hero{overflow:hidden;border:1px solid #294e6a;border-radius:28px;background:rgba(8,20,34,.86);box-shadow:0 30px 90px #000c}.hero img{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover}.copy{padding:clamp(24px,5vw,52px)}.eyebrow{color:var(--green);font-size:.82rem;font-weight:850;letter-spacing:.15em;text-transform:uppercase}.copy h1{font-size:clamp(2.4rem,7vw,5.4rem);line-height:.94;letter-spacing:-.055em;margin:.24em 0}.lede{max-width:750px;color:#c0d0df;font-size:clamp(1rem,2vw,1.25rem);line-height:1.65}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}.step{padding:20px;border:1px solid var(--line);border-radius:18px;background:#071421}.step b{display:block;color:var(--amber);margin-bottom:7px}.step p{margin:0;color:var(--muted);line-height:1.5}.note{margin-top:22px;color:var(--muted);font-size:.92rem}@media(max-width:700px){.nav{align-items:flex-start;flex-direction:column}.flow{grid-template-columns:1fr}.hero{border-radius:20px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <nav class="nav" aria-label="Project actions"><div class="brand">NO-INERTIA</div><div class="actions"><button class="button" id="share" type="button">Share</button><a class="button primary" href="https://github.com/www-infinity4/No-Inertia">View launcher source</a></div></nav>
+    <article class="hero">
+      <img src="./assets/share-preview-v1.png" alt="A phone terminal launches a local runtime connected to logging and status consoles.">
+      <section class="copy">
+        <div class="eyebrow">Local runtime experiment</div>
+        <h1>Keep the process moving.</h1>
+        <p class="lede">No-Inertia documents a Termux-oriented launcher for running a compact local language model as a background process while preserving output in a log.</p>
+        <div class="flow"><div class="step"><b>Launch</b><p>Start the local model from the phone terminal.</p></div><div class="step"><b>Persist</b><p>Detach the process so the terminal session can close.</p></div><div class="step"><b>Reconnect</b><p>Return to the log and runtime state when needed.</p></div></div>
+        <p class="note">This page documents the launcher concept. Runtime behavior depends on the local model, device, configuration and available memory.</p>
+      </section>
+    </article>
+  </main>
+  <script>
+    document.getElementById('share').addEventListener('click',async(event)=>{const data={title:'No-Inertia — Launch, Persist, Reconnect',text:'A mobile local-model launcher concept.',url:'https://www-infinity4.github.io/No-Inertia/'};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(data.url);event.currentTarget.textContent='Link copied';}}catch(error){if(error.name!=='AbortError')location.href='https://twitter.com/intent/tweet?text='+encodeURIComponent(data.title)+'&url='+encodeURIComponent(data.url);}});
+  </script>
+  <script defer src="https://www-infinity4.github.io/Mint-For-Infinity/unified-wallet.js?v=20260831-game-rewards1"></script>
+  <script defer src="https://www-infinity4.github.io/Mint-For-Infinity/site-community.js?v=20260831-storage2" data-site-id="NO-INERTIA" data-site-title="No-Inertia" data-share-url="https://www-infinity4.github.io/No-Inertia/"></script>
+</body>
+</html>
